@@ -8,7 +8,7 @@ export default function MusicToggle() {
   const toggle = () => {
     if (!audioRef.current) {
       // Use a royalty-free romantic piano piece from a CDN
-      audioRef.current = new Audio('https://www.bensound.com/bensound-music/bensound-romantic.mp3')
+      audioRef.current = new Audio('WhatsApp Audio 2026-03-15 at 10.52.47 AM.mpeg')
       audioRef.current.loop = true
       audioRef.current.volume = 0.35
     }
