@@ -1,11 +1,12 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
-import { FaHeart } from 'react-icons/fa'
+import { FaHeart, FaBars, FaTimes } from 'react-icons/fa'
 
 const navLinks = ['Home', 'Events']
 
 export default function Navbar() {
   const navRef = useRef(null)
+  const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
     gsap.fromTo(navRef.current,
@@ -26,6 +27,7 @@ export default function Navbar() {
   }, [])
 
   const scrollTo = (id) => {
+    setIsOpen(false)
     const el = document.getElementById(id.toLowerCase().replace(' ', '-').replace("'s", ''))
     if (el) el.scrollIntoView({ behavior: 'smooth' })
   }
@@ -65,12 +67,37 @@ export default function Navbar() {
             ))}
           </div>
 
-
-
           {/* Mobile hamburger icon */}
-          <div className="md:hidden text-yellow-700">
-            <FaHeart size={22} className="animate-pulse" />
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden text-yellow-700 hover:text-yellow-900 transition-colors duration-300 p-2 z-50 relative"
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+          </button>
+        </div>
+
+        {/* Mobile Dropdown Menu */}
+        <div
+          className={`fixed inset-0 bg-white/95 backdrop-blur-xl z-40 md:hidden flex flex-col items-center justify-center gap-8 transition-all duration-500 ${
+            isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none translate-y-[-10px]'
+          }`}
+          style={{ height: '100vh', width: '100vw', top: 0, left: 0 }}
+        >
+          <div className="flex items-center gap-2 mb-4">
+            <FaHeart className="text-pink-400 animate-pulse" size={24} />
+            <span className="font-script text-4xl gold-text">Srimathi & Ajith</span>
           </div>
+
+          {navLinks.map((link) => (
+            <button
+              key={link}
+              onClick={() => scrollTo(link)}
+              className="font-sans text-xl tracking-widest uppercase text-gray-800 hover:text-yellow-600 transition-colors duration-300 py-2"
+            >
+              {link}
+            </button>
+          ))}
         </div>
       </nav>
     </>

@@ -70,11 +70,13 @@ export default function Footer() {
         <div className="divider-gold mb-6" />
 
         {/* Copyright */}
-        <div className="flex items-center justify-center gap-2 text-white/30 text-xs tracking-widest">
-          <FaHeart size={10} className="text-pink-500" />
-          <span>Made with love for Srimathi & Ajith Kumar · 2026</span>
+        <div className="flex flex-col items-center justify-center gap-2 text-white/30 text-[10px] sm:text-xs tracking-widest text-center px-4">
+          <div className="flex items-center gap-2">
+            <FaHeart size={10} className="text-pink-500 animate-pulse" />
+            <span>Made with love for Srimathi & Ajith Kumar · 2026</span>
+            <FaHeart size={10} className="text-pink-500 animate-pulse" />
+          </div>
           <span>By R.Jegatheeswaran Tech Innovations</span>
-          <FaHeart size={10} className="text-pink-500" />
         </div>
       </div>
     </footer>

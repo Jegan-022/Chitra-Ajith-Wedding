@@ -66,23 +66,23 @@ body {
   }
 
   .btn-gold {
-    @apply px-8 py-3 rounded-full font-sans text-sm tracking-widest uppercase transition-all duration-500;
+    @apply px-6 py-2.5 sm:px-8 sm:py-3 rounded-full font-sans text-xs sm:text-sm tracking-widest uppercase transition-all duration-500;
     background: linear-gradient(135deg, #f5ddbb, #c9a84c, #a07830);
     color: #fff;
-    box-shadow: 0 4px 20px rgba(201, 168, 76, 0.4);
+    box-shadow: 0 4px 20px rgba(201,168,76,0.4);
   }
 
   .btn-gold:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(201, 168, 76, 0.6);
+    box-shadow: 0 8px 30px rgba(201,168,76,0.6);
   }
 
   .section-title {
-    @apply font-serif text-4xl md:text-5xl text-center mb-4;
+    @apply font-serif text-2xl sm:text-3xl md:text-5xl text-center mb-4 leading-tight;
   }
 
   .section-subtitle {
-    @apply font-script text-2xl text-center;
+    @apply font-script text-xl sm:text-2xl text-center;
     color: var(--gold);
   }
 

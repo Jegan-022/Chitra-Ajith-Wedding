@@ -77,17 +77,17 @@ export default function VideoIntro({ onComplete }) {
       <div className="absolute inset-0 bg-black/40" />
 
       {/* Couple names overlay */}
-      <div ref={textRef} className="relative z-10 text-center px-4">
-        <p className="font-script text-3xl md:text-4xl mb-4" style={{ color: '#F5DDBB' }}>
+      <div ref={textRef} className="relative z-10 text-center px-4 w-full max-w-2xl mx-auto">
+        <p className="font-script text-2xl sm:text-3xl md:text-4xl mb-4" style={{ color: '#F5DDBB' }}>
           Together Forever
         </p>
-        <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold leading-tight drop-shadow-lg">
+        <h1 className="font-serif text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold leading-tight drop-shadow-lg flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-0">
           <span className="gold-text">Ajith Kumar</span>
-          <span className="text-white/60 mx-4 md:mx-6 text-3xl md:text-5xl">&</span>
+          <span className="text-white/60 mx-2 md:mx-6 text-xl sm:text-3xl md:text-5xl">&</span>
           <span className="gold-text">Srimathi</span>
         </h1>
         <div className="divider-gold mt-6 mb-4" />
-        <p className="font-elegant text-white/70 text-lg md:text-xl tracking-widest uppercase drop-shadow-md">
+        <p className="font-elegant text-white/70 text-sm sm:text-base md:text-xl tracking-widest uppercase drop-shadow-md">
           Are Getting Married
         </p>
 
@@ -104,7 +104,7 @@ export default function VideoIntro({ onComplete }) {
       {/* Skip button */}
       <button
         onClick={handleSkip}
-        className="absolute bottom-8 right-8 z-20 px-6 py-2 rounded-full text-sm tracking-widest uppercase transition-all duration-300 border border-white/30 text-white hover:border-gold hover:bg-gold/10 backdrop-blur-sm"
+        className="absolute bottom-6 right-6 sm:bottom-8 sm:right-8 z-20 px-4 py-1.5 sm:px-6 sm:py-2 rounded-full text-xs sm:text-sm tracking-widest uppercase transition-all duration-300 border border-white/30 text-white hover:border-gold hover:bg-gold/10 backdrop-blur-sm"
       >
         Skip Intro →
       </button>

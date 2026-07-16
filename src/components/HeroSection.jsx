@@ -62,8 +62,8 @@ export default function HeroSection() {
     )
   }, [])
 
-  const scrollToStory = () => {
-    document.getElementById('our-story')?.scrollIntoView({ behavior: 'smooth' })
+  const scrollToCouple = () => {
+    document.getElementById('couple')?.scrollIntoView({ behavior: 'smooth' })
   }
 
   const pad = (n) => String(n ?? 0).padStart(2, '0')
@@ -88,42 +88,42 @@ export default function HeroSection() {
       <div className="absolute top-12 right-[52%] opacity-10 float-anim-2 text-4xl select-none">✨</div>
 
       {/* Split layout */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-10 md:gap-0 py-20 md:py-0 min-h-screen">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-10 md:gap-0 py-24 md:py-0 min-h-screen">
 
         {/* LEFT — Text */}
-        <div ref={leftRef} className="flex-1 flex flex-col items-start gap-4 md:pr-10">
+        <div ref={leftRef} className="flex-1 flex flex-col items-center md:items-start text-center md:text-left gap-4 md:pr-10 w-full">
 
-          <p className="font-elegant italic text-white/60 text-sm md:text-base tracking-widest" style={{ opacity: 0 }}>
+          <p className="font-elegant italic text-white/60 text-xs sm:text-sm md:text-base tracking-widest" style={{ opacity: 0 }}>
             ✦ Together With Their Families ✦
           </p>
 
-          <h1 className="font-serif font-bold leading-none" style={{ fontSize: 'clamp(3rem, 7vw, 6.5rem)', opacity: 0 }}>
+          <h1 className="font-serif font-bold leading-none" style={{ fontSize: 'clamp(2.2rem, 7vw, 6.5rem)', opacity: 0 }}>
             <span className="gold-text">Srimathi</span>
           </h1>
 
-          <div className="flex items-center gap-4 w-full" style={{ opacity: 0 }}>
+          <div className="flex items-center justify-center md:justify-start gap-4 w-full" style={{ opacity: 0 }}>
             <div className="divider-gold flex-1" style={{ maxWidth: '80px' }} />
             <FaHeart className="text-pink-400 animate-pulse flex-shrink-0" size={18} />
             <div className="divider-gold flex-1" style={{ maxWidth: '80px' }} />
           </div>
 
-          <h1 className="font-serif font-bold leading-none" style={{ fontSize: 'clamp(2.4rem, 5.5vw, 5.5rem)', opacity: 0 }}>
+          <h1 className="font-serif font-bold leading-none" style={{ fontSize: 'clamp(1.8rem, 5.5vw, 5.5rem)', opacity: 0 }}>
             <span className="gold-text">Ajith Kumar</span>
           </h1>
 
-          <p className="font-elegant italic text-white/70 text-base md:text-lg leading-relaxed max-w-md" style={{ opacity: 0 }}>
+          <p className="font-elegant italic text-white/70 text-sm sm:text-base md:text-lg leading-relaxed max-w-md" style={{ opacity: 0 }}>
             "We cordially Invite You To Celebrate Our Wedding"
           </p>
 
-          <div style={{ opacity: 0 }}>
-            <p className="font-script text-2xl md:text-3xl" style={{ color: '#f5ddbb' }}>23rd August 2026</p>
-            <p className="font-elegant text-white/50 tracking-[0.25em] uppercase text-xs md:text-sm mt-1">
+          <div className="flex flex-col items-center md:items-start" style={{ opacity: 0 }}>
+            <p className="font-script text-xl sm:text-2xl md:text-3xl" style={{ color: '#f5ddbb' }}>23rd August 2026</p>
+            <p className="font-elegant text-white/50 tracking-[0.25em] uppercase text-[10px] sm:text-xs md:text-sm mt-1">
               Palani, Tamil Nadu, India
             </p>
           </div>
 
           {/* Countdown */}
-          <div ref={countdownRef} className="glass-card inline-flex gap-5 md:gap-8 px-6 md:px-10 py-4 mt-2" style={{ opacity: 0 }}>
+          <div ref={countdownRef} className="glass-card inline-flex gap-3 sm:gap-5 md:gap-8 px-4 sm:px-6 md:px-10 py-3 sm:py-4 mt-2 max-w-full overflow-hidden" style={{ opacity: 0 }}>
             {[
               { label: 'Days', val: time.d },
               { label: 'Hours', val: time.h },
@@ -131,16 +131,16 @@ export default function HeroSection() {
               { label: 'Secs', val: time.s },
             ].map(({ label, val }) => (
               <div key={label} className="text-center">
-                <div className="font-serif text-2xl md:text-3xl font-bold gold-text">{pad(val)}</div>
-                <div className="text-white/50 text-xs tracking-widest uppercase mt-0.5">{label}</div>
+                <div className="font-serif text-xl sm:text-2xl md:text-3xl font-bold gold-text">{pad(val)}</div>
+                <div className="text-white/50 text-[10px] sm:text-xs tracking-widest uppercase mt-0.5">{label}</div>
               </div>
             ))}
           </div>
 
           {/* CTA */}
           <div ref={ctaRef} className="mt-2" style={{ opacity: 0 }}>
-            <button onClick={scrollToStory} className="btn-gold glow-gold">
-              ✦ View Our Story ✦
+            <button onClick={scrollToCouple} className="btn-gold glow-gold">
+              ✦ Meet the Couple ✦
             </button>
           </div>
         </div>
@@ -148,25 +148,23 @@ export default function HeroSection() {
         {/* RIGHT — Couple photo */}
         <div
           ref={rightRef}
-          className="flex-1 flex items-center justify-center relative"
+          className="flex-1 flex items-center justify-center relative w-full"
           style={{ opacity: 0 }}
         >
           <div className="absolute inset-0 rounded-3xl pointer-events-none" style={{
             background: 'radial-gradient(ellipse at center, rgba(201,168,76,0.25) 0%, transparent 70%)',
           }} />
 
-          <div className="relative">
+          <div className="relative w-full max-w-[480px]">
             {/* Animated ring borders */}
             <div className="absolute -inset-3 rounded-3xl border border-yellow-500/20 animate-pulse" />
             <div className="absolute -inset-6 rounded-3xl border border-yellow-400/10" />
 
             {/* Photo */}
             <div
-              className="relative overflow-hidden bg-white"
+              className="relative overflow-hidden bg-white w-full"
               style={{
                 borderRadius: '2rem',
-                maxWidth: '480px',
-                width: '100%',
                 boxShadow: '0 0 60px rgba(201,168,76,0.3), 0 0 120px rgba(201,168,76,0.1), 0 30px 80px rgba(0,0,0,0.5)',
                 border: '2px solid rgba(201,168,76,0.35)',
               }}
@@ -174,10 +172,8 @@ export default function HeroSection() {
               <img
                 src={imagesConfig.hero}
                 alt="Srimathi and Ajith Kumar"
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-cover object-top min-h-[300px] sm:min-h-[450px] max-h-[600px]"
                 style={{ 
-                  minHeight: '450px', 
-                  maxHeight: '600px',
                   mixBlendMode: 'multiply', // Blends the white background seamlessly
                   filter: 'contrast(1.05) saturate(1.1)' 
                 }}

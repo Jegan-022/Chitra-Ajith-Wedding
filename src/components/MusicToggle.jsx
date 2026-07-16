@@ -26,7 +26,7 @@ export default function MusicToggle() {
   return (
     <button
       onClick={toggleMusic}
-      className="fixed bottom-6 left-6 z-50 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+      className="fixed bottom-5 left-5 sm:bottom-6 sm:left-6 z-50 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
       style={{
         background: "linear-gradient(135deg,#f5ddbb,#c9a84c)",
         boxShadow: playing
@@ -38,8 +38,8 @@ export default function MusicToggle() {
     >
 
       {playing
-        ? <FaMusic className="text-white animate-pulse" size={18}/>
-        : <FaVolumeMute className="text-white" size={18}/>
+        ? <FaMusic className="text-white animate-pulse text-[14px] sm:text-[18px]" />
+        : <FaVolumeMute className="text-white text-[14px] sm:text-[18px]" />
       }
 
       {playing && (

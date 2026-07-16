@@ -54,19 +54,19 @@ export default function VenueSection() {
             {/* Info */}
             <div>
               <h4 className="font-serif text-xl font-bold text-gray-800 mb-4">Venue Details</h4>
-              <div className="space-y-3">
+              <div className="space-y-4">
                 {[
                   { icon: '📅', label: 'Date', val: 'August 23, 2026' },
                   { icon: '⏰', label: 'Time', val: '9:00 AM Onwards' },
-                  { icon: '📍', label: 'Address', val: 'Sri Jaga Sankara Mahal,Thiru nagar,Sivagiripatti,palani,Tamil nadu' },
+                  { icon: '📍', label: 'Address', val: 'Sri Jaga Sankara Mahal, Thiru nagar, Sivagiripatti, Palani, Tamil Nadu' },
                   { icon: '🚗', label: 'Parking', val: 'Available at venue' },
-                  { icon: '📞', label: 'Contact', val: '+91 9047345183, +91 9626563226, +91 6382104870' },
+                  { icon: '📞', label: 'Contact', val: '+91 9047345183,\n+91 9626563226,\n+91 6382104870' },
                 ].map(item => (
                   <div key={item.label} className="flex items-start gap-3">
                     <span className="text-xl flex-shrink-0">{item.icon}</span>
                     <div>
-                      <span className="text-xs uppercase tracking-widest text-yellow-600 block">{item.label}</span>
-                      <span className="font-elegant text-gray-700">{item.val}</span>
+                      <span className="text-[10px] sm:text-xs uppercase tracking-widest text-yellow-600 block">{item.label}</span>
+                      <span className="font-elegant text-gray-700 text-sm sm:text-base whitespace-pre-line break-words leading-relaxed">{item.val}</span>
                     </div>
                   </div>
                 ))}
@@ -74,10 +74,11 @@ export default function VenueSection() {
             </div>
 
             {/* Embedded Map */}
-            <div className="rounded-2xl overflow-hidden" style={{ minHeight: '250px' }}>
+            <div className="rounded-2xl overflow-hidden w-full" style={{ minHeight: '250px' }}>
               <iframe
                 title="Wedding Venue Map"
                 src="https://www.google.com/maps?q=10.446876,77.535813&output=embed"
+                width="100%"
                 height="100%"
                 style={{ border: 'none', minHeight: '250px' }}
                 allowFullScreen

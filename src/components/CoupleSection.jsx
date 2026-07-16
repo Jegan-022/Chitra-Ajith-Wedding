@@ -61,12 +61,12 @@ export default function CoupleSection() {
         </div>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-10">
           {couple.map((person, i) => (
             <div
               key={person.role}
               ref={el => cardsRef.current[i] = el}
-              className={`relative rounded-3xl overflow-hidden bg-gradient-to-br ${person.color} p-8 group cursor-pointer transition-all duration-500 hover:-translate-y-3`}
+              className={`relative rounded-3xl overflow-hidden bg-gradient-to-br ${person.color} p-6 sm:p-8 group cursor-pointer transition-all duration-500 hover:-translate-y-3`}
               style={{
                 boxShadow: `0 10px 40px rgba(0,0,0,0.08)`,
                 border: '1px solid rgba(201,168,76,0.2)',
@@ -86,7 +86,7 @@ export default function CoupleSection() {
               </div>
 
               {/* Circular photo */}
-              <div className="relative mx-auto mb-6" style={{ width: 200, height: 200 }}>
+              <div className="relative mx-auto mb-6 w-36 h-36 sm:w-48 sm:h-48">
                 {/* Decorative rings */}
                 <div className="absolute inset-0 rounded-full border-2 border-yellow-400/30 scale-110 animate-ping opacity-30" />
                 <div className="absolute inset-0 rounded-full border border-yellow-300/40 scale-105" />
@@ -102,7 +102,7 @@ export default function CoupleSection() {
               </div>
 
               {/* Name */}
-              <h3 className="font-serif text-3xl md:text-4xl text-center font-bold mb-3 text-gray-800">
+              <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl text-center font-bold mb-3 text-gray-800">
                 {person.name}
               </h3>
 
@@ -110,7 +110,7 @@ export default function CoupleSection() {
               <div className="divider-gold mb-4" />
 
               {/* Quote */}
-              <p className="font-elegant italic text-center text-gray-600 text-base leading-relaxed">
+              <p className="font-elegant italic text-center text-gray-600 text-sm sm:text-base leading-relaxed">
                 {person.quote}
               </p>
             </div>
