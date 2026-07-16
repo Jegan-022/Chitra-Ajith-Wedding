@@ -4,13 +4,11 @@ import VideoIntro from './components/VideoIntro'
 import Navbar from './components/Navbar'
 import HeroSection from './components/HeroSection'
 import CoupleSection from './components/CoupleSection'
-import LoveStorySection from './components/LoveStorySection'
-import GallerySection from './components/GallerySection'
+
 import EventsSection from './components/EventsSection'
 import VenueSection from './components/VenueSection'
-import MemoriesSlider from './components/MemoriesSlider'
-import RSVPSection from './components/RSVPSection'
-import WishesSection from './components/WishesSection'
+
+
 import Footer from './components/Footer'
 import PetalsAnimation from './components/PetalsAnimation'
 import MusicToggle from './components/MusicToggle'
@@ -52,13 +50,10 @@ export default function App() {
             <HeroSection />
             <CoupleSection />
             <VideoMessageSection />
-            <LoveStorySection />
-            <GallerySection />
+
             <EventsSection />
             <VenueSection />
-            <MemoriesSlider />
-            <RSVPSection />
-            <WishesSection />
+
           </main>
 
           <Footer />

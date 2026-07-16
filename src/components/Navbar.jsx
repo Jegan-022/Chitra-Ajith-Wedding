@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { FaHeart } from 'react-icons/fa'
 
-const navLinks = ['Home', 'Our Story', 'Gallery', 'Events', 'RSVP']
+const navLinks = ['Home', 'Events']
 
 export default function Navbar() {
   const navRef = useRef(null)
@@ -65,13 +65,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* CTA */}
-          <button
-            onClick={() => scrollTo('RSVP')}
-            className="btn-gold text-xs md:text-sm hidden md:block"
-          >
-            RSVP Now
-          </button>
+
 
           {/* Mobile hamburger icon */}
           <div className="md:hidden text-yellow-700">
