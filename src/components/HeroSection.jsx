@@ -97,8 +97,8 @@ export default function HeroSection() {
             ✦ Together With Their Families ✦
           </p>
 
-          <h1 className="font-serif font-bold leading-none" style={{ fontSize: 'clamp(2.2rem, 7vw, 6.5rem)', opacity: 0 }}>
-            <span className="gold-text">Srimathi</span>
+          <h1 className="font-serif font-bold leading-none" style={{ fontSize: 'clamp(1.8rem, 5.5vw, 5.5rem)', opacity: 0 }}>
+            <span className="gold-text">Ajith Kumar</span>
           </h1>
 
           <div className="flex items-center justify-center md:justify-start gap-4 w-full" style={{ opacity: 0 }}>
@@ -108,7 +108,7 @@ export default function HeroSection() {
           </div>
 
           <h1 className="font-serif font-bold leading-none" style={{ fontSize: 'clamp(1.8rem, 5.5vw, 5.5rem)', opacity: 0 }}>
-            <span className="gold-text">Ajith Kumar</span>
+            <span className="gold-text">Srimathi</span>
           </h1>
 
           <p className="font-elegant italic text-white/70 text-sm sm:text-base md:text-lg leading-relaxed max-w-md" style={{ opacity: 0 }}>
@@ -207,7 +207,7 @@ export default function HeroSection() {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/40 animate-bounce flex flex-col items-center gap-1 z-10">
-        <span className="text-xs tracking-widest uppercase font-sans">Scroll 🫣👇</span>
+        <span className="text-xs tracking-widest uppercase font-sans"></span>
         <FaChevronDown size={14} />
       </div>
     </section>
