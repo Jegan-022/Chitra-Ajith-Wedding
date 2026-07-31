@@ -60,7 +60,7 @@ export default function VenueSection() {
                   { icon: '⏰', label: 'Time', val: '9:00 AM Onwards' },
                   { icon: '📍', label: 'Address', val: 'Sri Jaga Sankara Mahal, Thiru nagar, Sivagiripatti, Palani, Tamil Nadu' },
                   { icon: '🚗', label: 'Parking', val: 'Available at venue' },
-                  { icon: '📞', label: 'Contact', val: '+91 9047345183,\n+91 9626563226,\n+91 6382104870' },
+                  { icon: '📞', label: 'Contact', val: '+91 8508504169,\n+91 6382104870' },
                 ].map(item => (
                   <div key={item.label} className="flex items-start gap-3">
                     <span className="text-xl flex-shrink-0">{item.icon}</span>
