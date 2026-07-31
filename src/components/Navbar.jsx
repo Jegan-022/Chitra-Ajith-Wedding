@@ -86,7 +86,7 @@ export default function Navbar() {
         >
           <div className="flex items-center gap-2 mb-4">
             <FaHeart className="text-pink-400 animate-pulse" size={24} />
-            <span className="font-script text-4xl gold-text">Srimathi & Ajith</span>
+            <span className="font-script text-4xl gold-text">Ajith & Srimathi</span>
           </div>
 
           {navLinks.map((link) => (
