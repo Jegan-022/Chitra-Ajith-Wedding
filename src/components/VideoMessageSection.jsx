@@ -55,7 +55,7 @@ export default function VideoMessageSection() {
         <div className="text-pink-300 text-3xl opacity-80 mb-2">✦</div>
 
         <h2 className="font-serif text-3xl sm:text-4xl md:text-7xl font-bold text-white drop-shadow-xl" style={{ opacity: 0 }}>
-          Srimathi <span className="text-gold mx-1 sm:mx-2 text-2xl sm:text-4xl">&</span> Ajith Kumar
+          Ajith Kumar <span className="text-gold mx-1 sm:mx-2 text-2xl sm:text-4xl">&</span> Srimathi
         </h2>
         
         <p className="font-elegant text-white/90 text-sm sm:text-base md:text-2xl italic max-w-2xl leading-relaxed drop-shadow-lg" style={{ opacity: 0 }}>
