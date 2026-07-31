@@ -50,7 +50,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <FaHeart className="text-pink-400 animate-pulse" size={18} />
-            <span className="font-script text-2xl md:text-3xl gold-text">S & AK</span>
+            <span className="font-script text-2xl md:text-3xl gold-text">AK & Mathi</span>
           </div>
 
           {/* Nav Links - desktop */}
