@@ -30,41 +30,8 @@ export default function Footer() {
 
         {/* Date & Location */}
         <p className="font-sans text-xs tracking-[0.3em] uppercase text-yellow-400/60 mb-8">
-          August 23 , 2026 &nbsp;✦&nbsp; Palani, Tamil Nadu
+          August 23rd ,2026 &nbsp;✦&nbsp; Palani, Tamil Nadu
         </p>
-
-        {/* Social Icons */}
-        <div className="flex items-center justify-center gap-6 mb-10">
-          {[
-            { Icon: FaInstagram, label: 'Instagram' },
-            { Icon: FaFacebook, label: 'Facebook' },
-            { Icon: FaWhatsapp, label: 'WhatsApp' },
-            { Icon: FaYoutube, label: 'YouTube' },
-          ].map(({ Icon, label }) => (
-            <a
-              key={label}
-              href="#"
-              aria-label={label}
-              className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:-translate-y-1"
-              style={{
-                background: 'rgba(255,255,255,0.05)',
-                border: '1px solid rgba(201,168,76,0.2)',
-              }}
-              onMouseEnter={e => {
-                e.currentTarget.style.background = 'rgba(201,168,76,0.2)'
-                e.currentTarget.style.borderColor = 'rgba(201,168,76,0.6)'
-                e.currentTarget.style.boxShadow = '0 0 20px rgba(201,168,76,0.3)'
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.background = 'rgba(255,255,255,0.05)'
-                e.currentTarget.style.borderColor = 'rgba(201,168,76,0.2)'
-                e.currentTarget.style.boxShadow = 'none'
-              }}
-            >
-              <Icon style={{ color: 'rgba(245,221,187,0.7)' }} size={16} />
-            </a>
-          ))}
-        </div>
 
         {/* Divider */}
         <div className="divider-gold mb-6" />
