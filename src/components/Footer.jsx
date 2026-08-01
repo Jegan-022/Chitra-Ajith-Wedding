@@ -24,7 +24,8 @@ export default function Footer() {
 
         {/* Quote */}
         <p className="font-elegant italic text-white/60 text-xl md:text-2xl mb-8 leading-relaxed">
-          "Two souls. One Promise"
+          "Two souls. One Promise"</p>
+        <p className="font-elegant italic text-white/60 text-xl md:text-2xl mb-8 leading-relaxed">
           "A life time of love ,laughter and countless beautiful Memories."
         </p>
 
